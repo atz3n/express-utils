@@ -58,4 +58,3 @@ For **unit tests** run
 ```
 npm test
 ```
-
