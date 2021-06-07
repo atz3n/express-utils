@@ -1,0 +1,41 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ 
+        "@typescript-eslint"
+    ],
+    "extends": [ 
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
+    ],
+    "rules": {
+        "no-irregular-whitespace": "error",
+        "no-empty-function": "error",
+        "object-curly-spacing": [ "error", "always" ],
+        "space-before-blocks": [ "error", "always" ],
+        "keyword-spacing": [ "error", { "before": true, "after": true } ],
+        "max-len": [ "error", { "code": 120, "ignorePattern": "^import\\s|^export\\s", "ignoreStrings": true } ],
+        "no-mixed-operators": "error",
+        "no-trailing-spaces": "error",
+        "arrow-parens": [ "error", "as-needed", { "requireForBlockBody": true } ],
+        "eqeqeq": [ "error", "always"],
+        "import/no-unresolved": "off",
+        "import/order": "error",
+        "max-classes-per-file": [ "error", 1 ],
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-unused-vars": [ "error", { "args": "none" } ],
+        // "@typescript-eslint/interface-name-prefix": [ "error", { "prefixWithI": "always" } ],
+        "no-multiple-empty-lines": [ "error", { "max": 2 } ],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
+        "object-shorthand": "error",
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true } ],
+        "no-lonely-if": "error",
+        "curly": "error",
+        "quotes": ["error", "double"]
+    }
+}
