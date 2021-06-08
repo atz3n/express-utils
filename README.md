@@ -37,7 +37,6 @@ errorHandler        : sends error responses to the client
 
 ## Development
 
-
 To **initialize** the project just clone this repository and run
 ```
 npm install
