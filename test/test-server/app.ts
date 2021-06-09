@@ -6,6 +6,7 @@ import { badRequestErrorRouter } from "./routes/errors/badRequestError";
 import { internalErrorRouter } from "./routes/errors/internalError";
 import { notAuthorizedErrorRouter } from "./routes/errors/notAuthorizedError";
 import { notFoundErrorRouter } from "./routes/errors/notFoundError";
+import { authTokenValidationRouter } from "./routes/middlewares/authTokenValidation";
 import { requestValidationRouter } from "./routes/middlewares/requestValidation";
 
 export const app = express();
@@ -13,6 +14,8 @@ export const app = express();
 app.use(json());
 
 app.use(requestValidationRouter);
+app.use(authTokenValidationRouter);
+
 app.use(badRequestErrorRouter);
 app.use(internalErrorRouter);
 app.use(notAuthorizedErrorRouter);

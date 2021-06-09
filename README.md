@@ -31,6 +31,7 @@ InternalError       : returns status code 500
 It also contains the following middleware functions:
 ```
 requestValidation   : validates express-validator validation results
+validateAuthToken   : validates an auth token
 errorHandler        : sends error responses to the client
 ```
 
