@@ -8,5 +8,4 @@ export * from "./errors/errorTypes";
 
 export * from "./middleware/errorHandler";
 export * from "./middleware/requestValidation";
-
-export * from "express-validator";
+export * from "./middleware/authTokenValidation";

@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
-import { query, validateRequest } from "../../../../src/index";
-import { validateAuthToken } from "../../../../src/middleware/authTokenValidation";
-import { allowedAuthToken } from "../../../setup";
+import { query } from "express-validator";
+import { validateAuthToken, validateRequest } from "../../../../src/index";
+import { allowedAuthToken } from "../../../config";
 
 
 const router = express.Router();

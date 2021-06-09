@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
-import { body, query, validateRequest } from "../../../../src/index";
+import { body, query } from "express-validator";
+import { validateRequest } from "../../../../src/index";
 
 
 const router = express.Router();

@@ -1,5 +1,5 @@
 import request from "supertest";
-import { allowedAuthToken } from "../../setup";
+import { allowedAuthToken } from "../../config";
 import { app } from "./../../test-server/app";
 
 
