@@ -5,7 +5,7 @@ import { validateRequest } from "../../../../src/index";
 
 const router = express.Router();
 
-router.get("/validateQuery",
+router.get("/validate-query",
     [
         query("text").notEmpty().withMessage("name required"),
         query("text").isString().withMessage("name must be a string")
@@ -18,7 +18,7 @@ router.get("/validateQuery",
     }
 );
 
-router.post("/validateBody",
+router.post("/validate-body",
     [
         body("text").notEmpty().withMessage("name required"),
         body("text").isString().withMessage("name must be a string")

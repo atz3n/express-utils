@@ -4,7 +4,7 @@ import { InternalError } from "../../../../src/index";
 
 const router = express.Router();
 
-router.get("/internalError",
+router.get("/internal-error",
     (request: Request, response: Response) => {
         throw new InternalError();
     }

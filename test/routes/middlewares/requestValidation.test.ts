@@ -6,7 +6,7 @@ it("successfully validates a query parameter", async () => {
     const text  = "text send back from server";
 
     const response = await request(app)
-        .get("/validateQuery")
+        .get("/validate-query")
         .query({ text })
         .expect(200);
 
@@ -18,7 +18,7 @@ it("successfully validates a body parameter", async () => {
     const text  = "text send back from server";
 
     const response = await request(app)
-        .post("/validateBody")
+        .post("/validate-body")
         .send({ text })
         .expect(200);
 
@@ -30,7 +30,7 @@ it("throws an error because of an invalid parameter", async () => {
     const texte  = "text send back from server";
 
     const response = await request(app)
-        .post("/validateBody")
+        .post("/validate-body")
         .send({ texte })
         .expect(400);
 

@@ -6,7 +6,7 @@ import { allowedAuthToken } from "../../../config";
 
 const router = express.Router();
 
-router.get("/validateAuthToken",
+router.get("/validate-auth-token",
     [
         query("authToken").notEmpty().withMessage("authToken required"),
         query("authToken").isString().withMessage("authToken must be a string")

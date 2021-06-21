@@ -6,7 +6,7 @@ it("returns a bad request error", async () => {
     const text  = "text thrown by bad request error";
 
     const response = await request(app)
-        .get("/badRequestError")
+        .get("/bad-request-error")
         .query({ text })
         .expect(400);
 
@@ -16,7 +16,7 @@ it("returns a bad request error", async () => {
 
 it("returns a bad request error with default message", async () => {
     const response = await request(app)
-        .get("/badRequestError")
+        .get("/bad-request-error")
         .expect(400);
 
     expect(response.body.errors[0].message).toEqual("Bad Request");
@@ -25,7 +25,7 @@ it("returns a bad request error with default message", async () => {
 
 it("returns an internal server error", async () => {
     const response = await request(app)
-        .get("/internalError")
+        .get("/internal-error")
         .expect(500);
 
     expect(response.body.errors[0].message).toEqual("Internal Server Error");
@@ -34,7 +34,7 @@ it("returns an internal server error", async () => {
 
 it("returns a not authorized error", async () => {
     const response = await request(app)
-        .get("/notAuthorizedError")
+        .get("/not-authorized-error")
         .expect(401);
 
     expect(response.body.errors[0].message).toEqual("Not Authorized");
@@ -45,7 +45,7 @@ it("returns a not found error", async () => {
     const text  = "text thrown by not found error";
 
     const response = await request(app)
-        .get("/notFoundError")
+        .get("/not-found-error")
         .query({ text })
         .expect(404);
 
@@ -55,7 +55,7 @@ it("returns a not found error", async () => {
 
 it("returns a not found error with default message", async () => {
     const response = await request(app)
-        .get("/notFoundError")
+        .get("/not-found-error")
         .expect(404);
 
     expect(response.body.errors[0].message).toEqual("Not Found");

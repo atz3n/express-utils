@@ -4,7 +4,7 @@ import { NotAuthorizedError } from "../../../../src/index";
 
 const router = express.Router();
 
-router.get("/notAuthorizedError",
+router.get("/not-authorized-error",
     (request: Request, response: Response) => {
         throw new NotAuthorizedError();
     }

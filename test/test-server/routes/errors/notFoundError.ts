@@ -4,7 +4,7 @@ import { NotFoundError } from "../../../../src/index";
 
 const router = express.Router();
 
-router.get("/notFoundError",
+router.get("/not-found-error",
     (request: Request, response: Response) => {
         const text = <string | undefined> request.query.text;
         throw new NotFoundError(text);
