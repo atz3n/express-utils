@@ -6,7 +6,6 @@ export class InternalError extends CustomError {
 
     constructor() {
         super("Internal Server Error");
-
         Object.setPrototypeOf(this, InternalError.prototype);
     }
 
