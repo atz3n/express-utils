@@ -6,7 +6,8 @@ const router = express.Router();
 
 router.get("/notFoundError",
     (request: Request, response: Response) => {
-        throw new NotFoundError();
+        const text = <string | undefined> request.query.text;
+        throw new NotFoundError(text);
     }
 );
 
