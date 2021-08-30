@@ -1,5 +1,5 @@
 export * from "./errors/BadRequestError";
-export * from "./errors/CustomError";
+export * from "./errors/HttpError";
 export * from "./errors/InternalError";
 export * from "./errors/NotAuthorizedError";
 export * from "./errors/NotFoundError";

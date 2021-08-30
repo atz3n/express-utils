@@ -1,7 +1,7 @@
-import { CustomError } from "./CustomError";
+import { HttpError } from "./HttpError";
 import { ErrorMessage } from "./errorTypes";
 
-export class NotAuthorizedError extends CustomError {
+export class NotAuthorizedError extends HttpError {
     statusCode = 401;
 
     constructor() {

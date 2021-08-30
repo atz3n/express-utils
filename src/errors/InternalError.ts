@@ -1,7 +1,7 @@
-import { CustomError } from "./CustomError";
+import { HttpError } from "./HttpError";
 import { ErrorMessage } from "./errorTypes";
 
-export class InternalError extends CustomError {
+export class InternalError extends HttpError {
     statusCode = 500;
 
     constructor() {

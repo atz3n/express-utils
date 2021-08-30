@@ -1,8 +1,8 @@
 import { ValidationError } from "express-validator";
-import { CustomError } from "./CustomError";
+import { HttpError } from "./HttpError";
 import { ErrorMessage } from "./errorTypes";
 
-export class RequestValidationError extends CustomError {
+export class RequestValidationError extends HttpError {
     public readonly errors: ValidationError[];
 
     statusCode = 400;

@@ -1,7 +1,7 @@
-import { CustomError } from "./CustomError";
+import { HttpError } from "./HttpError";
 import { ErrorMessage } from "./errorTypes";
 
-export class BadRequestError extends CustomError {
+export class BadRequestError extends HttpError {
     statusCode = 400;
     public message: string;
 

@@ -1,11 +1,11 @@
 import { ErrorMessage } from "./errorTypes";
 
-export abstract class CustomError extends Error {
+export abstract class HttpError extends Error {
     abstract statusCode: number;
 
     constructor(message: string) {
         super(message);
-        Object.setPrototypeOf(this, CustomError.prototype);
+        Object.setPrototypeOf(this, HttpError.prototype);
     }
 
     abstract serializeErrors(): ErrorMessage[];

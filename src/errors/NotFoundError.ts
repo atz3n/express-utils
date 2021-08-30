@@ -1,7 +1,7 @@
-import { CustomError } from "./CustomError";
+import { HttpError } from "./HttpError";
 import { ErrorMessage } from "./errorTypes";
 
-export class NotFoundError extends CustomError {
+export class NotFoundError extends HttpError {
     statusCode = 404;
     public message: string;
 
