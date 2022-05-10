@@ -30,10 +30,13 @@ InternalError       : returns status code 500
 
 It also contains the following middleware functions:
 ```
-requestValidation   : validates express-validator validation results
+validationRequest   : validates express-validator validation results
 validateAuthToken   : validates an auth token
+validateOrigin      : validates the origin
 errorHandler        : sends error responses to the client
 ```
+
+Have a look into the [test server](test/test-server/app.ts) for example usage.
 
 
 ## Development
