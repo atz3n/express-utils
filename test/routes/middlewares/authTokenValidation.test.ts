@@ -3,7 +3,7 @@ import { allowedAuthToken } from "../../config";
 import { app } from "./../../test-server/app";
 
 
-it("successfully validates the auth token", async () => {
+it("Should successfully validate the auth token", async () => {
     const authToken = allowedAuthToken;
 
     const response = await request(app)
@@ -15,7 +15,7 @@ it("successfully validates the auth token", async () => {
 });
 
 
-it("throws a not authorized error because of invalid auth token", async () => {
+it("Should throw a not authorized error in case of an invalid auth token", async () => {
     const authToken = allowedAuthToken + " nope";
 
     await request(app)

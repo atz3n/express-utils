@@ -2,7 +2,7 @@ import request from "supertest";
 import { app } from "./../../test-server/app";
 
 
-it("successfully validates a query parameter", async () => {
+it("Should successfully validate a query parameter", async () => {
     const text  = "text send back from server";
 
     const response = await request(app)
@@ -14,7 +14,7 @@ it("successfully validates a query parameter", async () => {
 });
 
 
-it("successfully validates a body parameter", async () => {
+it("Should successfully validate a body parameter", async () => {
     const text  = "text send back from server";
 
     const response = await request(app)
@@ -26,14 +26,13 @@ it("successfully validates a body parameter", async () => {
 });
 
 
-it("throws an error because of an invalid parameter", async () => {
+it("Should throw an error in case of an invalid parameter", async () => {
     const texte  = "text send back from server";
 
     const response = await request(app)
         .post("/validate-body")
         .send({ texte })
         .expect(400);
-
 
     const errors = response.body.errors;
     expect(errors[0].message).toEqual("name required");

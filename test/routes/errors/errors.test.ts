@@ -2,7 +2,7 @@ import request from "supertest";
 import { app } from "./../../test-server/app";
 
 
-it("returns a bad request error", async () => {
+it("Should return a bad request error", async () => {
     const text  = "text thrown by bad request error";
 
     const response = await request(app)
@@ -14,7 +14,7 @@ it("returns a bad request error", async () => {
 });
 
 
-it("returns a bad request error with default message", async () => {
+it("Should return a bad request error with default message", async () => {
     const response = await request(app)
         .get("/bad-request-error")
         .expect(400);
@@ -23,7 +23,7 @@ it("returns a bad request error with default message", async () => {
 });
 
 
-it("returns an internal server error", async () => {
+it("Should return an internal server error", async () => {
     const response = await request(app)
         .get("/internal-error")
         .expect(500);
@@ -32,7 +32,7 @@ it("returns an internal server error", async () => {
 });
 
 
-it("returns a not authorized error", async () => {
+it("Should return a not authorized error", async () => {
     const response = await request(app)
         .get("/not-authorized-error")
         .expect(401);
@@ -41,7 +41,7 @@ it("returns a not authorized error", async () => {
 });
 
 
-it("returns a not found error", async () => {
+it("Should return a not found error", async () => {
     const text  = "text thrown by not found error";
 
     const response = await request(app)
@@ -53,7 +53,7 @@ it("returns a not found error", async () => {
 });
 
 
-it("returns a not found error with default message", async () => {
+it("Should return a not found error with default message", async () => {
     const response = await request(app)
         .get("/not-found-error")
         .expect(404);
