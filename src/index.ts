@@ -7,5 +7,6 @@ export * from "./errors/RequestValidationError";
 export * from "./errors/errorTypes";
 
 export * from "./middleware/errorHandler";
-export * from "./middleware/requestValidation";
-export * from "./middleware/authTokenValidation";
+export * from "./middleware/requestValidator";
+export * from "./middleware/authTokenValidator";
+export * from "./middleware/originValidator";
