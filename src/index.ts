@@ -1,4 +1,5 @@
 export * from "./errors/BadRequestError";
+export * from "./errors/TooManyRequestsError";
 export * from "./errors/HttpError";
 export * from "./errors/InternalError";
 export * from "./errors/NotAuthorizedError";

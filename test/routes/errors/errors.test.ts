@@ -60,3 +60,12 @@ it("Should return a not found error with default message", async () => {
 
     expect(response.body.errors[0].message).toEqual("Not Found");
 });
+
+
+it("Should return a too many request error", async () => {
+    const response = await request(app)
+        .get("/too-many-requests-error")
+        .expect(429);
+
+    expect(response.body.errors[0].message).toEqual("Too Many Requests");
+});
